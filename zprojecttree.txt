@@ -1,0 +1,21 @@
+foodlabels/
+    - template.php ----> toda a pagina completa
+    
+    sql/
+        - modelisation.txt
+    assets/
+        css/
+            -style.css
+        js/
+            -script.js
+        img/
+            -logo
+        img_products/
+        fonts/
+    inc/
+        -init.inc.php -> connex base donnes
+        -fonctions.inc.php
+        -header.inc.php
+        -nav.inc.php
+        -footer.inc.php
+        

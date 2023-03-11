@@ -1,0 +1,759 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url('../img/backgroundff.jpg');
+    background-size:cover;
+    
+    
+}
+
+.flex{
+    display: flex;
+}
+
+    
+/*------------------------------VERTICALNAVBAR--------------------------------*/
+
+nav{
+    height: 100%;
+    width: 17vw;
+    /* From https://css.glass */
+    background: rgba(226, 226, 226, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    color: #e5ffff;
+    text-decoration: none;
+    text-decoration-color: #e5ffff;
+    
+    position: fixed;
+    
+}
+
+
+
+
+nav img{
+    margin:45px auto 30px auto;
+    width: 180px;
+    display: block;
+    align-items: center;
+}
+
+
+nav ul{
+    /* margin-top: 80px;
+    margin-left: 55px; */
+    margin: 80px 0;
+    display: flex;
+    font-size: 1.5vw;
+    list-style: none;
+    flex-direction: column;
+    height: 100%;
+    
+
+
+}
+
+nav li{
+    width: 100%;
+    padding: 10px;
+    margin-left: 25px;
+    
+    
+}
+nav .logout{
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 0;
+    
+}
+
+nav a:is(:link, :active, :visited){
+    text-decoration: none;
+    color: #FFFDFA;
+    
+}
+nav .navlinks:hover{
+    background: rgba(226, 226, 226, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 5px;
+    
+    
+    
+}
+
+nav a:is(:link, :active, :visited).active{
+    background: rgba(226, 226, 226, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 5px;
+    color: #000000;
+    
+    
+} 
+
+/* ------------------LOGOUT BUTTON----------------- */
+
+
+
+
+/* ----------------SEARCHBAR AND LINKS--------------------- */
+
+section{
+    width: 82vw;
+    margin-left: 18vw;
+    
+}
+
+.main{
+    margin: 10px 20px 0 20px;
+    border-radius: 3px;
+    
+        /* From https://css.glass */
+    background: rgba(93, 93, 93, 0.35);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    overflow: hidden;
+    height: 85vh;
+    width: 80vw;
+}
+
+.category__body{
+    width: 95%;
+    
+    max-height: calc(99% - 1.6rem);
+    background-color: rgba(255, 255, 255, 0.164);
+
+    margin: .8rem auto;
+    border-radius: 3px;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.category__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.category__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.category__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+#searchnav{
+    /* background-color:rgba(84, 84, 84, 0.9);
+     */
+     /* From https://css.glass */
+    background: rgba(79, 79, 79, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    margin: 10px 20px 0 20px;
+    padding: 20px 40px;
+    border-radius: 3px;
+    justify-content: space-between;
+    width: 80vw;
+    
+}
+
+#searchnav input{
+    font-size: 25px;
+    border-radius: 2px;
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    background: rgba(79, 79, 79, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    color: #002407;
+}
+
+#searchnav button{
+    font-size: 25px;
+    padding: 0 8px;
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    background: rgba(79, 79, 79, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    color: #002407;
+    border-radius: 2px;
+   
+}
+
+.searchnav .links{
+    margin-top: 5px;
+}
+
+
+#searchnav a{
+    color: #fffdfab1;
+    text-decoration: none;
+    margin: 15px 20px 0 0;
+    font-size: 35px;
+}
+
+/* -------------------- PRODUCTS POPUP PRINT BUTTONS-------------------------- */
+
+
+.popup{
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 45vh;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%) scale(0.1) ;
+    width: 700px;
+   border-radius: 3px;
+   visibility: hidden;
+   transition: transform 0.3s, top 0.3s;
+   z-index: 5;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1) ;
+    z-index: 5;
+
+}
+
+.popup h2{
+    color: #e5ffff;
+    margin-top: 6vh;
+    text-align: center;
+   justify-content: center;
+}
+.popup .closepopup{
+    text-align: end;
+    justify-content: end;
+    margin: 20px 25px;
+    
+    
+}
+.popup .closepopup button{
+    font-size: 50px;
+    padding: 2px 5px;
+    background: transparent;
+    border: none;
+    color: #e5ffff;
+    cursor: pointer;
+
+}
+
+.popup .defrost{
+    background-color: #004c6d;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(58, 172, 75, 0.19);
+    margin: 30px 20px 0 20px;
+    padding: 20px;
+    font-size: 20px;
+    color: #e5ffff;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px rgba( 0, 0, 0, 0.2 );
+    text-decoration: none;
+
+}
+.popup .expiration{
+    background-color:#006d07;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(58, 172, 75, 0.19);
+    margin: 30px 20px 0 20px;
+    padding: 20px;
+    font-size: 20px;
+    color: #e5ffff;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px  rgba( 0, 0, 0, 0.2 );
+    text-decoration: none;
+
+}
+.popup .center{
+    text-align: center;
+   justify-content: center;
+   margin-top: 45px;
+   
+}
+
+ 
+
+
+
+/* ----------------------------REGISTERFORM e LOGIN---------------------------------- */
+
+
+.registerbox{
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 55vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+   border-radius: 3px;
+}
+
+.bodylogin{
+    background-image: url('../img/backgroundlogin.jpg'); 
+    background-size: cover;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+.loginbox{
+    /* background-color: rgb(0, 0, 0, 0.8); */
+    /* From https://css.glass */
+/* From https://css.glass */
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 43vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    border-radius: 3px;
+   
+}
+.registerbox h1, 
+.loginbox h1,
+.addproductbox h1{
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+    color: #FFFDFA;
+    font-size: 30px;
+}
+.registerbox h2, 
+.loginbox h2,
+.addproductbox h2{
+    text-align: center;
+    padding: 5px;
+    color: #FFFDFA;
+    font-size: 24px;
+}
+
+.registerbox form, 
+.loginbox form,
+.addproductbox form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txtfield{
+    position: relative;
+    border-bottom: 2px solid #97c197;
+    margin: 30px 0;
+}
+
+.txtfield input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #FFFDFA;
+    
+}
+
+.txtfield label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #97acc1;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.txtfield span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #FFFDFA;
+    transition: 0.2s;
+}
+
+.txtfield input:focus ~ label,
+.txtfield input:valid ~ label{
+    top: -5px;
+    color: #FFFDFA;
+}
+.txtfield input:focus ~ span::before,
+.txtfield input:valid ~ span::before{
+    width: 100%;
+}
+
+button[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #f6f6f6;
+    background: rgb(137, 175, 143);
+    color: #FFFDFA;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    border: 2px solid #006d19;
+    transition: 0.2s;
+    color: #043e0f;
+}
+
+/* ---------------------------ADD PRODUCT FORM------------- */
+
+
+.selectfield label{
+    color: #97acc1;
+}
+
+.selectfield select{
+    background: rgba( 0, 0, 0, 0.15 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 2px;
+    border: 1px solid rgba(137, 175, 143, 0.18);
+    width: 200px;
+    font-size: 25px;
+    color: #97acc1;
+    
+}
+
+form #dlc{
+    margin: 20px 0;
+}
+
+form .imageupload{
+    margin: 20px 0;
+}
+
+.imageupload label{
+    color: #97acc1;
+}
+
+.imageupload input{
+    margin: 20px 0;
+    font-size: 20px;
+    background: rgba( 0, 0, 0, 0.15 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 2px;
+    border: 1px solid rgba(137, 175, 143, 0.18);
+    color: #828283b7;
+    padding: 5px;
+
+}
+
+.choosefile::-webkit-file-upload-button{
+    background: rgba( 0, 0, 0, 0.15 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 2px;
+    border: 1px solid rgba(137, 175, 143, 0.18);
+    color: #97acc1;
+    font-size: 25px;
+}
+
+.addproductbox{
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 75vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+   border-radius: 3px;
+}
+
+
+/* ---------------alert----(login n register)---------------- */
+
+.alert{
+    color: #850400;
+    text-align: center;
+    margin-left: 4px;
+    margin-top: 10px;
+}
+
+/* -----------------------user menu---------------------- */
+
+.usercontainer{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    
+    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 3px;
+    
+    height: 55vh;
+    width: 80vw;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    
+    font-size: 22px;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+.usercontainer ul{
+    list-style: none;
+}
+
+.usercontainer h1{
+    text-align: center;
+}
+
+
+.leftuser hr{
+    width: 150px;
+    justify-content: center;
+    margin: auto;
+    background-color: #004c6d;
+}
+.rightuser hr{
+    width: 300px;
+    justify-content: center;
+    margin: auto;
+    background-color: #004c6d;
+}
+.leftuser{
+    text-align: right;
+    font-weight: bold;
+}
+
+.rightuser{
+    text-align: left;
+}
+
+#userbox {
+    justify-content: center;
+    margin-top: 80px;
+    
+}
+#userbox h1{
+    margin-right: 80px;
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+#userbuttons{
+    justify-content: center;
+    margin-top: 50px;
+}
+#userbuttons a{
+    margin: 20px 70px;
+}
+
+.userregister{
+    background: rgba( 0, 41, 255, 0.35 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 2px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+    
+.addproduct{
+    background: rgba(89, 89, 89, 0.609);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 3px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-decoration-color: #e5ffff;
+    color: rgba(255, 255, 255, 0.841);
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+
+/* return button  user page || create new user page  */
+
+.return a{
+    font-size: 80px;
+    padding: 15px;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-decoration-color: #e5ffff;
+    color: rgba(255, 255, 255, 0.841);
+}
+.return a:hover{
+    font-size: 80px;
+    padding: 15px;
+    background: rgba(1, 71, 3, 0.25);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba(5, 205, 25, 0.18);
+    text-decoration-color: #e5ffff;
+    color: rgba(1, 36, 9, 0.841);
+}
+
+.return{
+    margin: 50px;
+}
+
+/* -------------------PRODUCTS LIST TABLE------------------ */
+
+.listcontainer{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    
+    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 3px;
+    
+    height: 70vh;
+    width: 82vw;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    
+    font-size: 22px;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.listcontainer h1{
+    margin: 20px 0 0 20px;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: rgba(255, 255, 255, 0.164);
+
+    margin: .8rem auto;
+    border-radius: 3px;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+.table{
+    width: 100%;
+}
+
+.table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+.table thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #C0C0C0;
+    cursor: pointer;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #00000011;
+}
+ 
+@media (max-width: 1000px){
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+database: foodlabels
+    -user
+        -id_user INT(3) PK AI
+        -name_user VARCHAR (20) UNIQUE
+        -name_full VARCHAR (100) UNIQUE
+        -email VARCHAR (240) UNIQUE
+        -pwd VARCHAR (240)
+        -registration_date DATE
+        -status INT(1)
+
+    -product
+        -id_product INT(3) PK AI
+        -name_product VARCHAR (240)
+        -time_defrost TIME
+        -time_limit TIME
+        -img_product VARCHAR (240)
+    
+    -category
+        -id_category INT(3) PK
+        -name_category VARCHAR (240)
+        -img_category VARCHAR (240)
+    
+    -relation_product_category
+        -id_relation INT(3) PK AI 
+        -id_product INT(3) FK
+        -id_category INT(3) FK 
