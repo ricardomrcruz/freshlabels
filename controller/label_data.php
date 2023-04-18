@@ -3,20 +3,24 @@
 //controller php treatments
 
 //model inclusion
-include './model/manage_product.php';
+include './model/label_data.php';
 
-// display product cards
+//label data management
+//we catch the id product in the slug and apply it in the function
 
+$labelData= new ProductLabelData($pdo);
 $product_id = $_GET['product'];
-$data_product = get_product_data($product_id);
-foreach ($data_product as $row) {
-    $id = $row['id_product'];
-    $category = $row['name_category'];
-    $name = $row['name_product'];
-    $defrost = $row['time_defrost'];
-    $limit = $row['time_limit'];
-    $image = $row['img_product'];
-}
+$data_product = $labelData->get_product_data($product_id);
+
+
+// we pick the first element of the array because we only need to fetch one row of the table which is actually the first and only one via slug
+
+$name = $data_product[0]['name_product'];
+$defrost = $data_product[0]['time_defrost'];
+$limit = $data_product[0]['time_limit'];
+$id = $data_product[0]['id_product'];
+
+
 
 // Converting the time msql data into seconds
 // DEFROST MAX TIME

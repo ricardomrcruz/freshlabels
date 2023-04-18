@@ -2,6 +2,7 @@
 
 include 'inc/connect.inc.php'; //connetion to database
 include 'inc/functions.inc.php'; //functions
+include 'inc/cookie.php'; //cookie status
 include 'controller/userregister.php'; // user registration treatments
 
 if( ! user_is_admin() ){
@@ -23,11 +24,14 @@ include 'inc/header.inc.php'; //html header
     <?php echo $msg; ?>
     
     <form method="POST" class="registerform" action="">
+         
+    <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+
         <div class="txtfield">
             <input type="text" name="name_user" id="name_user" required autocomplete="off">
             <span></span>
             <label for="name_user">Username</label>
-
+            
         </div>
         <div class="txtfield">
             <input type="text" name="name_full" id="name_full" required autocomplete="off">

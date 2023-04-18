@@ -4,7 +4,9 @@ require_once 'vendor/autoload.php'; //dompdf standard
 use Dompdf\Dompdf;
 
 include 'inc/connect.inc.php'; //connection to database
+include 'inc/cookie.php'; //cookie status
 include 'controller/label_data.php'; //display products
+
 
 $html = '<!DOCTYPE html>
 <html lang="en">
@@ -27,7 +29,7 @@ $html = '<!DOCTYPE html>
     
     th {
         text-align: left;
-        padding: 10px 20px 10px 0;
+        padding: 10px 10px 10px 0;
     }</style>
 </head>
 

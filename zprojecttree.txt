@@ -1,5 +1,5 @@
 foodlabels/
-    - template.php ----> toda a pagina completa
+    - template.php ----> full html page temp 
     
     sql/
         - modelisation.txt

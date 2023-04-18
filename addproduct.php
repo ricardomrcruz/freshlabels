@@ -2,15 +2,21 @@
 
 include 'inc/connect.inc.php'; //connetion to database
 include 'inc/functions.inc.php'; //functions
-include 'controller/manage_product.php';
+include 'inc/cookie.php'; //cookie status
+include 'controller/add_product.php';
+
+
 
 
 
 // PRODUCT REGISTRATION
-    
-
 //display 
 include 'inc/header.inc.php'; //html header
+
+
+// SECURITY
+
+
 
 ?>
 
@@ -51,7 +57,6 @@ include 'inc/header.inc.php'; //html header
                 <option value="24:00:00">1 day</option>
                 <option value="48:00:00">2 days</option>
                 <option value="72:00:00">3 days</option>
-                <option value="168:00:00">1 week</option>
             </select>
         </div>
         <div class="selectfield" id="dlc">
@@ -74,10 +79,11 @@ include 'inc/header.inc.php'; //html header
             </select>
         </div>
         <div class="imageupload">
-        <label for="img_product">Image Product (optional)</label>
+        <label for="img_product">Image Product</label>
         <br>
         <input type="file" name="img_product" class="choosefile" placeholder="hhh">
         </div>
+        <input type="hidden" name="token2" value="<?=$_SESSION['token2'];?>">
         <button type="submit" name="submit">add new product</button>
     </form>
 </div>

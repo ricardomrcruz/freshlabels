@@ -1,9 +1,10 @@
+<div class="dash">
 <nav>
 
 
 
-    <a href="home.php"><img src="./assets/img/restaurant-icon-png-4887.png" alt=""></a>
-    <ul>
+    <a href="home.php"> <!--<img src="./assets/img/restaurant-icon-png-4887.png" alt="">--></a>
+    <ul> 
         <li><a class="navlinks" href="home.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
         <li><a class="navlinks" href="products.php?productcat=1"><i class="fa-solid fa-seedling"></i> Condimentation</a></li>
         <li><a class="navlinks" href="products.php?productcat=2"><i class="fa-solid fa-bacon"></i> Meat</a></li>
@@ -17,14 +18,16 @@
 
 </nav>
 
-<section>
+<section class="secondhalf">
     <div id="searchnav" class="flex">
         <div id="search" class="flex">
-            <input type="text">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form action="" class="search-bar">   
+            <input id="input" type="text" placeholder="search product" name="q">
+            <button type="submit" class="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
         <div class="links">
             <a href="user.php"><i class="fa-solid fa-users"></i></a>
-            <a><i class="fa-solid fa-gear"></i></a>
+            <a href="#"><i class="fa-solid fa-gear"></i></a>
         </div>
     </div>

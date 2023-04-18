@@ -2,16 +2,12 @@
 
 include 'inc/connect.inc.php'; //connetion to database
 include 'inc/functions.inc.php'; //functions
-
+include 'inc/cookie.php'; //cookie status
 
 //display 
 
 include 'inc/header.inc.php'; //html header
 include 'inc/nav.inc.php'; //html navbar
-
-
-
-
 
 
 ?>       

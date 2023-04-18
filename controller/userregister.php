@@ -2,7 +2,7 @@
 
 
 // USER REGISTRATION
-if( isset($_POST['name_user']) && isset($_POST['name_full']) && isset($_POST['email']) && isset($_POST['pwd']) ) {
+if( isset($_POST['name_user']) && isset($_POST['name_full']) && isset($_POST['email']) && isset($_POST['pwd']) && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
     $name_user = trim($_POST['name_user']);
     $name_full = trim($_POST['name_full']);
     $email = trim($_POST['email']);
@@ -96,7 +96,7 @@ if( isset($_POST['name_user']) && isset($_POST['name_full']) && isset($_POST['em
     if($error == false){
         
         //encryptation of the password
-        $pwd = password_hash($pwd, PASSWORD_DEFAULT);
+        $pwd = password_hash($pwd, PASSWORD_ARGON2I);
 
         // USER STATUS
 

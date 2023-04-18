@@ -2,14 +2,12 @@
 
 include 'inc/connect.inc.php'; //connetion to database
 include 'inc/functions.inc.php'; //functions
-
-
+include 'inc/cookie.php'; //cookie status
 
 // user acess restriction if session is closed
 if( ! user_is_connected()) {
-    header('location: login.php');
+    header('location: index.php');
 }
-
 
 //display 
 
@@ -26,6 +24,7 @@ include 'controller/manage_product.php' //display cat
             </section>
         </div>
         </section>
+    </div>
         
    
 <?php

@@ -2,19 +2,18 @@
 
 include 'inc/connect.inc.php'; //connetion to database
 include 'inc/functions.inc.php'; //functions
-include 'controller/list_products.php';
+include 'inc/cookie.php'; //cookie status
+include 'controller/product_list.php';
+
 
 if( ! user_is_admin() ){
     header('location: home.php');
     exit(); //on bloque l'execution du code qui suit cette ligne
 }
 
-
 //display 
 
 include 'inc/header.inc.php'; //html header
-
-
 
 
 ?>
@@ -46,10 +45,6 @@ include 'inc/header.inc.php'; //html header
 
         </table>
     
-    
-
-   
- 
     
 </div>   
 </section>

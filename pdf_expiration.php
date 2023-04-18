@@ -4,7 +4,10 @@ require_once 'vendor/autoload.php'; //dompdf standard
 use Dompdf\Dompdf;
 
 include 'inc/connect.inc.php'; //connection to database
+include 'inc/cookie.php'; //cookie status
 include 'controller/label_data.php'; //display products
+
+
 
 $html = '<!DOCTYPE html>
 <html lang="en">
@@ -27,25 +30,25 @@ $html = '<!DOCTYPE html>
     
     th {
         text-align: left;
-        padding: 10px 50px;
+        padding: 10px 10px 10px 0;
     }</style>
 </head>
 
 <body>
-    <h2>'.$name.'</h2>
+    <h2>' . $name . '</h2>
     <table>
     <tbody>
             <tr>
                 <th scope="row">DATE</th>
-                <td>'.$date.'</td>
+                <td>' . $date . '</td>
             </tr>
             <tr>
                 <th scope="row">EXPIRATION DATE</th>
-                <td>'.$expiration_date.'</td>
+                <td>' . $expiration_date . '</td>
             </tr>
             <tr>
                 <th scope="row">EMPLOYEE</th>
-                <td>'. $_SESSION['user']['name_user'].'</td>
+                <td>' . $_SESSION['user']['name_user'] . '</td>
             </tr>
         </tbody>
     </table>

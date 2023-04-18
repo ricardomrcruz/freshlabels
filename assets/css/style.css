@@ -2,13 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background-image: url('../img/backgroundff.jpg');
+    background-image: url('../img/backdash.png');
     background-size:cover;
-    
     
 }
 
@@ -16,14 +15,32 @@ body{
     display: flex;
 }
 
+.invisible{
+    display: none;
+}
+
+ .dash{
     
+    margin: 35px auto;
+    display: flex;
+    height: 90vh;
+    width: 85vw;
+    border-radius: 25px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+  
+    overflow: hidden;
+    
+} 
+
+
+
 /*------------------------------VERTICALNAVBAR--------------------------------*/
 
 nav{
-    height: 100%;
-    width: 17vw;
+    
+    width: 20vw;
     /* From https://css.glass */
-    background: rgba(226, 226, 226, 0.35);
+    background: rgba(125, 125, 125, 0.414);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
@@ -31,8 +48,9 @@ nav{
     color: #e5ffff;
     text-decoration: none;
     text-decoration-color: #e5ffff;
+    border-radius: 25px 0 0 25px;
+    overflow: hidden;
     
-    position: fixed;
     
 }
 
@@ -41,7 +59,7 @@ nav{
 
 nav img{
     margin:45px auto 30px auto;
-    width: 180px;
+    width: 100px;
     display: block;
     align-items: center;
 }
@@ -50,26 +68,27 @@ nav img{
 nav ul{
     /* margin-top: 80px;
     margin-left: 55px; */
-    margin: 80px 0;
+    margin: 160px 0;
     display: flex;
-    font-size: 1.5vw;
+    font-size: 1vw;
     list-style: none;
     flex-direction: column;
-    height: 100%;
+    
     
 
 
 }
 
 nav li{
-    width: 100%;
-    padding: 10px;
-    margin-left: 25px;
     
+    padding: 12px;
+    
+    margin-left: 25px;
+    box-sizing: border-box;
     
 }
 nav .logout{
-    margin-top: 100px;
+    margin-top: 20px;
     text-align: center;
     margin-left: 0;
     
@@ -78,35 +97,26 @@ nav .logout{
 nav a:is(:link, :active, :visited){
     text-decoration: none;
     color: #FFFDFA;
-    
-}
-nav .navlinks:hover{
-    background: rgba(226, 226, 226, 0.35);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-    border: 1px solid rgba(226, 226, 226, 0.19);
-    border-radius: 3px;
-    text-decoration: none;
-    padding: 5px 5px;
-    
-    
+    padding: 10px 10px;
     
 }
 
+
 nav a:is(:link, :active, :visited).active{
     background: rgba(226, 226, 226, 0.35);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
-    border: 1px solid rgba(226, 226, 226, 0.19);
+    padding: 10px 10px;
     border-radius: 3px;
     text-decoration: none;
-    padding: 5px 5px;
+    
     color: #000000;
     
-    
-} 
+}
+
+
 
 /* ------------------LOGOUT BUTTON----------------- */
 
@@ -115,14 +125,13 @@ nav a:is(:link, :active, :visited).active{
 
 /* ----------------SEARCHBAR AND LINKS--------------------- */
 
-section{
-    width: 82vw;
-    margin-left: 18vw;
+.secondhalf{
+    width: 80vw;
     
 }
 
 .main{
-    margin: 10px 20px 0 20px;
+    
     border-radius: 3px;
     
         /* From https://css.glass */
@@ -133,8 +142,9 @@ section{
     -webkit-backdrop-filter: blur(10.5px);
     border: 1px solid rgba(226, 226, 226, 0.19);
     overflow: hidden;
-    height: 85vh;
-    width: 80vw;
+    height: 90%;
+    
+    
 }
 
 .category__body{
@@ -165,11 +175,73 @@ section{
     visibility: visible;
 }
 
+/* SEARCH BAR */
+
+#search{
+
+}
+
+.search-bar{
+    width: 53vw;
+    max-width: 53vw;
+    
+    background: rgba( 255, 255, 255, 0.15 );
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin: 0 0 0 15px;
+    
+}
+
+.search-bar #input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    color: #FFFDFA;
+}
+
+::placeholder{
+    color: #fffdfab7;
+}
+
+.searchbutton{
+    color: #FFFDFA;
+    font-size: 20px;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgb(104, 104, 104, 0.2);
+    cursor: pointer;
+}
+
+
+
+
 #searchnav{
     /* background-color:rgba(84, 84, 84, 0.9);
      */
      /* From https://css.glass */
     background: rgba(79, 79, 79, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.19);
+    padding: 10px 10px;
+    border-radius:0 20px  0 0;
+    justify-content: space-between;
+    height: 10%;
+    
+}
+#searchnav2{
+    /* background-color:rgba(84, 84, 84, 0.9);
+     */
+     /* From https://css.glass */
+     background: rgba(39, 92, 39, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
@@ -182,48 +254,44 @@ section{
     
 }
 
-#searchnav input{
-    font-size: 25px;
-    border-radius: 2px;
-    border: 1px solid rgba(226, 226, 226, 0.19);
-    background: rgba(79, 79, 79, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-    color: #002407;
-}
 
-#searchnav button{
-    font-size: 25px;
-    padding: 0 8px;
-    border: 1px solid rgba(226, 226, 226, 0.19);
-    background: rgba(79, 79, 79, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-    color: #002407;
-    border-radius: 2px;
+#searchnav .links{
+    
+    display: flex;
    
+    
+    
 }
 
-.searchnav .links{
-    margin-top: 5px;
-}
 
-
-#searchnav a{
-    color: #fffdfab1;
+.links a{
+    color: #FFFDFA;
+    font-size: 20px;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background: rgba( 255, 255, 255, 0.15 );
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
     text-decoration: none;
-    margin: 15px 20px 0 0;
-    font-size: 35px;
+    padding: 10px 0;
+    margin: 5px 25px 0 0;
 }
+
+
+
+
 
 /* -------------------- PRODUCTS POPUP PRINT BUTTONS-------------------------- */
 
 
 .popup{
     background: rgba(0, 0, 0, 0.75);
-    border-radius: 16px;
+    border-radius: 25px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.5px);
     -webkit-backdrop-filter: blur(10.5px);
@@ -234,7 +302,6 @@ section{
     left: 40%;
     transform: translate(-50%, -50%) scale(0.1) ;
     width: 700px;
-   border-radius: 3px;
    visibility: hidden;
    transition: transform 0.3s, top 0.3s;
    z-index: 5;
@@ -330,7 +397,7 @@ section{
 }
 
 .bodylogin{
-    background-image: url('../img/backgroundlogin.jpg'); 
+    background-image: url('../img/loginbackg.png'); 
     background-size: cover;
     z-index: -1;
     height: 100vh;
@@ -341,16 +408,14 @@ section{
     /* background-color: rgb(0, 0, 0, 0.8); */
     /* From https://css.glass */
 /* From https://css.glass */
-    background: rgba(0, 0, 0, 0.75);
+    
+    color: black;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    
     height: 43vh;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
     width: 600px;
     border-radius: 3px;
@@ -361,29 +426,33 @@ section{
 .addproductbox h1{
     text-align: center;
     padding: 40px 40px 10px 40px;
-    color: #FFFDFA;
-    font-size: 30px;
+    text-shadow: 1px 2px 4px rgba(62,62,62,0.60);
+    color: black;
+    font-size: 45px;
 }
-.registerbox h2, 
-.loginbox h2,
-.addproductbox h2{
-    text-align: center;
-    padding: 5px;
-    color: #FFFDFA;
-    font-size: 24px;
+
+.hrhr{
+    border: none;
+    text-shadow: 1px 2px 4px rgba(62,62,62,0.60);
+    margin: auto;
+    width: 40px;
+    height: 3px;
+    background: #009E60;
+    transition: 0.2s;
 }
+
 
 .registerbox form, 
 .loginbox form,
 .addproductbox form{
-    padding: 0 40px;
+    padding: 25px 40px;
     box-sizing: border-box;
 }
 
 form .txtfield{
     position: relative;
-    border-bottom: 2px solid #97c197;
-    margin: 30px 0;
+    border-bottom: 2px solid #686868;
+    margin: 50px 0;
 }
 
 .txtfield input{
@@ -394,7 +463,7 @@ form .txtfield{
     border: none;
     background: none;
     outline: none;
-    color: #FFFDFA;
+    color: #686868;
     
 }
 
@@ -402,7 +471,7 @@ form .txtfield{
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #97acc1;
+    color: #009E60;
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;
@@ -416,36 +485,38 @@ form .txtfield{
     left: 0;
     width: 0%;
     height: 2px;
-    background: #FFFDFA;
+    background: #009E60;
     transition: 0.2s;
 }
 
 .txtfield input:focus ~ label,
 .txtfield input:valid ~ label{
     top: -5px;
-    color: #FFFDFA;
+    color: 	#009E60;
 }
 .txtfield input:focus ~ span::before,
 .txtfield input:valid ~ span::before{
     width: 100%;
 }
 
-button[type="submit"]{
+#submitbutton{
     width: 100%;
     height: 50px;
     border: 1px solid #f6f6f6;
-    background: rgb(137, 175, 143);
+    background: #009E60;
     color: #FFFDFA;
     border-radius: 2px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
+    border-radius: 20px;
 }
 
-button[type="submit"]:hover{
-    border: 2px solid #006d19;
+#submitbutton:hover{
+    border: 2px solid #00ff99;
     transition: 0.2s;
-    color: #043e0f;
+    color: #00ff99;
+    border-radius: 20px;
 }
 
 /* ---------------------------ADD PRODUCT FORM------------- */
@@ -555,26 +626,64 @@ form .imageupload{
     justify-content: center;
     text-align: center;
     
-
 }
 
-.usercontainer ul{
+.mainuser{
+    margin: 10px 20px 0 20px;
+    border-radius: 5px;
+    
+        /* From https://css.glass */
+        background: rgba(39, 92, 39, 0.2);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.10);
+    overflow: hidden;
+    height: 45vh;
+    width: 80vw;
+    
+}
+.mainuser2{
+    margin: 10px 20px 0 20px;
+    border-radius: 5px;
+    
+        /* From https://css.glass */
+    background: rgba(39, 92, 39, 0.2);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border: 1px solid rgba(226, 226, 226, 0.10);
+    overflow: hidden;
+    height: 40vh;
+    width: 40vw;
+}
+
+
+.usercontainer li,
+.mainuser li{
     list-style: none;
 }
 
-.usercontainer h1{
+.usercontainer h1,
+.usercontainer2 h1{
     text-align: center;
 }
 
+#userbox h1{
+    font-size: 100px;
+}
 
 .leftuser hr{
-    width: 150px;
+    width: 230px;
     justify-content: center;
     margin: auto;
     background-color: #004c6d;
+    
 }
 .rightuser hr{
-    width: 300px;
+    width: 450px;
     justify-content: center;
     margin: auto;
     background-color: #004c6d;
@@ -590,13 +699,21 @@ form .imageupload{
 
 #userbox {
     justify-content: center;
-    margin-top: 80px;
+    font-size: 30px;
+    background: rgba(39, 92, 39, 0.1);
+    width: 75vw;
+    margin: 50px auto 0 auto;
+    padding: 60px;
+    border-radius: 5px;
+    
     
 }
 #userbox h1{
-    margin-right: 80px;
-    font-size: 45px;
-    font-weight: lighter;
+    margin-right: 120px;
+    font-size: 40px;
+    text-align: left;
+    
+    
 }
 
 #userbuttons{
